@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Fetch Code",
+        "command": "sourcefetch:fetch"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "sourcefetch",
+          "submenu": [
+            {
+              "label": "Fetch Code",
+              "command": "sourcefetch:fetch"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
