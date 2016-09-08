@@ -498,19 +498,19 @@ Developer Tools:
 
 Note that the document has the following structure:
 
-<pre>
-<div class="accepted-answer">
+
+`<div class="accepted-answer">`
   ...
     ...
-      <pre>
-        <code>
+      `<pre>`
+        `<code>`
           ...snippet elements...
-        </code>
-      </pre>
+        `</code>`
+      `</pre>`
     ...
   ...
-</div>
-</pre>
+`</div>`
+
 
 * The accepted answer is denoted by a `div` with class `accepted-answer`
 
@@ -527,29 +527,7 @@ Now let's construct a jQuery statement for extracting code snippets:
 You should see the accepted answer code snippets printed out in the console.
 The code we just ran uses a special `$` function provided by jQuery. `$`
 accepts a **query string** to select and return certain HTML elements from the
-website. Let's take a look at how this code works by considering a couple of
-intermediate example queries:
-
-<pre>
-$('div.accepted-answer')
-> [<div id="answer-1077349" class="answer accepted-answer" ... ></div>]
-</pre>
-
-The above query will match all `<div>` elements that contain the class
-`accepted-answer`, in our case - just one div.
-
-<pre>
-$('div.accepted-answer pre code')
-> [<code>...</code>]
-</pre>
-
-Building upon the previous, this query will match any `<code>` element that
-is inside a `<pre>` element contained within the previously matched `<div>`.
-
-<pre>
-$('div.accepted-answer pre code').text()
-> "print("Hello World!")"
-</pre>
+website.
 
 The `text` function extracts and concatenates all text from the list of elements
 that would otherwise be returned by the previous query. This also strips out elements
